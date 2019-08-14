@@ -1,0 +1,207 @@
+:root {
+  --space-none: 0px;
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-xxl: 64px;
+  --primary-color-light: rgb(70, 216, 216);
+  --primary-color: rgb(31, 180, 180);
+  --primary-color-dark: rgb(25, 167, 167);
+  --gray-1: rgb(240, 240, 240);
+  --gray-2: rgb(210, 210, 210);
+  --gray-3: rgb(180, 180, 180);
+  --gray-4: rgb(120, 120, 120);
+  --gray-5: rgb(70, 70, 70);
+}
+
+/* BACKGROUND MODIFIERS
+----------------------------------------------------------------------------- */
+.bg-primary {
+  background: var(--primary-color);
+}
+
+.bg-1 {
+  background: var(--gray-1);
+}
+.bg-2 {
+  background: var(--gray-2);
+}
+.bg-3 {
+  background: var(--gray-3);
+}
+.bg-4 {
+  background: var(--gray-4);
+  color: white;
+}
+.bg-5 {
+  background: var(--gray-5);
+  color: white;
+}
+.bg-4 button:hover, .bg-5 button:hover {
+  box-shadow: none !important;
+}
+
+/* BUTTONS
+----------------------------------------------------------------------------- */
+button, .button {
+  padding: 12px 24px;
+  border: none;
+  margin: 4px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition-duration: .5s;
+  letter-spacing: 1.1px;
+  font-size: 14px;
+  font-weight: 400;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  outline: none !important;
+}
+button::after {
+  clip: hidden !important;
+}
+button:active, .button:active {
+  transform: scale(1.03);
+}
+button.primary {
+  background: var(--primary-color);
+  color: white;
+  padding: 14px 26px;
+}
+button.primary::before {
+  content: "";
+  position: absolute;
+  background: var(--primary-color-light);
+  top: 0;
+  right: 100%;
+  z-index: -1;
+  transition: 0.2s ease-in-out;
+  width: 101%;
+  height: 101%;
+}
+button.primary:hover::before {
+  right: 0;
+}
+button.primary.outlined, button.primary.transparent {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 12px 24px;
+}
+button.primary.outlined:hover {
+  color: white;
+  border: 2px solid var(--primary-color-light);
+}
+button.primaru.transparent::before {
+  background: rgba(31, 180, 180, 0.322);
+}
+
+
+
+button.secondary {
+  background: white;
+  color: #333;
+  padding: 14px 26px;
+}
+button.secondary::before {
+  content: "";
+  position: absolute;
+  background: var(--gray-1);
+  top: 0;
+  right: 100%;
+  z-index: -1;
+  transition: 0.2s ease-in-out;
+  width: 101%;
+  height: 101%;
+}
+button.secondary:hover::before {
+  right: 0;
+}
+button.secondary.outlined, button.secondary.transparent {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 24px;
+}
+button.secondary.outlined:hover::before {
+  background: white;
+}
+button.secondary.outlined:hover {
+  color: #333;
+}
+button.secondary.transparent::before {
+  background: rgba(255, 255, 255, 0.185);
+}
+
+/* CUSTOM STYLES */
+body {
+  margin: 0;
+  font-family: raleway;
+}
+#hero_container {
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/12/23/18/man-1253004_960_720.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hero_content {
+  text-align: center;
+  width: 100%;
+}
+#hero_title {
+  color: white;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  margin-top: 0;
+}
+#hero_seperator {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  background: var(--primary-color);
+  height: 2px;
+  margin: 32px auto;
+}
+#hero_subtitle {
+  color: rgba(255, 255, 255, 0.795);
+  margin-top: 0px;
+}
+#hero_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 48px;
+  position: relative;
+}
+.title {
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: var(--space-lg);
+  max-width: 50%;
+  border-bottom: 2px solid var(--primary-color);
+}
+.subtitle {
+  color: rgba(49, 49, 49, 0.795);
+}
+.bg-primary {
+  background: var(--primary-color);
+}
+
+
+
+#interviews {
+  background: #f7f7f7;
+}
+
